@@ -8,20 +8,25 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
         alignment: Alignment.center,
         margin: EdgeInsets.all(10.0),
         color: Colors.deepPurpleAccent,
-        child: new colm());
+        child:
+
+        new colm());
   }
 }
 
 class colm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [ new ImageAsset(),new Row1(), new Row2()
-        ,new Row1(), new Row2()
-       ,new myButton(),new myButton2()],
+    return SingleChildScrollView(
+      child: Column(
+        children: [ new ImageAsset(),new Row1(), new Row2()
+          ,new Row1(), new Row2()
+         ,new myButton(),new myButton2()],
+      ),
     );
   }
 }
@@ -32,11 +37,12 @@ class Row1 extends StatelessWidget {
     return Container(
 
 
-
       color: Colors.black,
         margin: EdgeInsets.all(5.0),
         padding: EdgeInsets.all(10.0),
         child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
 
 
@@ -70,6 +76,7 @@ class Row2 extends StatelessWidget {
         margin: EdgeInsets.all(5.0),
         padding: EdgeInsets.all(10.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
               "Status  : ",
@@ -118,10 +125,11 @@ class myButton extends StatelessWidget{
       height: 40,
       width: 200,
       child:
-        RaisedButton(
+        RaisedButton.icon(
           elevation: 10,
+          icon: Icon(Icons.access_alarm),
           color: Colors.lightGreen,
-          child: Text("See Toast",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          label: Text("See Toast",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
           textColor: Colors.white,
           onPressed: (){
             //action

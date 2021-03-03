@@ -16,12 +16,16 @@ class abcd extends StatelessWidget{
     return MaterialApp(
 
       debugShowCheckedModeBanner: false,
+
       title: "Math App",
       home: Scaffold(
+         backgroundColor: Colors.deepPurple[200],
         appBar: AppBar(
           title: Text("This is Math Appbar")
         ),
-        body: new Home(),
+        body:
+
+        new Home(),
 
       )
     );
@@ -29,6 +33,10 @@ class abcd extends StatelessWidget{
 
 
   }
-  
+
+
+
   
 }
+
+//keytool -genkey -v -keystore C:\Users\Moin Akash\Documents\flutterkey\key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key
